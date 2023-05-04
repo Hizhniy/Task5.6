@@ -3,7 +3,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 class MainClass
 {
-    static void Main(string[] args)
+    static void Main()
     {       
         GetUserData(out (string, string, int, int, string[], int, string[]) userdata);
         ShowUserData(userdata);
