@@ -4,13 +4,12 @@ using static System.Net.Mime.MediaTypeNames;
 class MainClass
 {
     static void Main(string[] args)
-    {
-        (string, string, int, int, string[], int, string[]) userdata;
-        GetUserDataFromConsole(out userdata);
+    {       
+        GetUserData(out (string, string, int, int, string[], int, string[]) userdata);
         ShowUserData(userdata);
         Console.ReadKey();
     }
-    static void GetUserDataFromConsole(out (string name, string surname, int age, int petsnum, string[] petsnames, int colorsnum, string[] colors) userdata)
+    static void GetUserData(out (string name, string surname, int age, int petsnum, string[] petsnames, int colorsnum, string[] colors) userdata)
     {
         Console.Write("Ваше имя: ");
         userdata.name = Console.ReadLine();
